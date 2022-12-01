@@ -1,16 +1,16 @@
-# tugas_pertemuan_14
+# Tugas Pertemuan 15 Pemrograman Mobile - Flutter
 
-A new Flutter project.
 
-## Getting Started
+Nama  : Bella Sonia Dwi Angelina <br/>
+NIM   : 2041720063 <br/>
+Kelas : TI-3E <br/>
 
-This project is a starting point for a Flutter application.
+## HASIL SCREENSHOOT
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Halaman Tab Pertama
+![Berita](ss/berita.jpeg)
+<br/>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Halaman Tab Kedua
+![Jadwal](ss/jadwal.jpeg)
+<br/>
