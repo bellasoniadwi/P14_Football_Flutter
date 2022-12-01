@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_pertemuan_14/content.dart';
+import 'package:tugas_pertemuan_14/schedule.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,18 +25,36 @@ class _Football extends State<Football> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('MyApp'),
+          title: Text("Bella'sApp"),
           backgroundColor: Colors.red,
           bottom: TabBar(tabs: [
             Tab(
               text: 'BERITA TERBARU',
             ),
             Tab(
-              text: 'PERTANDINGAN HARI INI',
+              text: 'JADWAL PERTANDINGAN',
             )
           ]),
         ),
-        body: ListView(
+        body: TabBarView(
+          children: [
+            Container(child: Profile(),),
+            Container(child: Jadwal(),)
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Profile extends StatefulWidget {
+  _Profile createState() => _Profile();
+}
+
+class _Profile extends State<Profile> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
           children: [
             const Image(
               image: NetworkImage(
@@ -121,8 +140,104 @@ class _Football extends State<Football> {
               description: 'Pablo Martín Páez Gavira dikenal secara luas sebagai Gavi adalah seorang pemain sepak bola yang mengisi posisi gelandang serang',
             ),
           ],
-        ),
-      ),
-    );
+        );
+  }
+}
+
+class Jadwal extends StatefulWidget {
+  _Jadwal createState() => _Jadwal();
+}
+
+class _Jadwal extends State<Jadwal> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+          children: [
+            const SizedBox(height: 5),
+            Schedule(
+              time: '20 November 2022\n23.00 WIB',
+              match: 'Qatar vs Ekuador',
+              place : 'Al Bayt Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '21 November 2022\n20.00 WIB',
+              match: 'Inggris vs Iran',
+              place : 'Khalifa International Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '22 November 2022\n17.00 WIB',
+              match: 'Argentina vs Arab Saudi',
+              place : 'Lusail Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '23 November 2022\n23.00 WIB',
+              match: 'Spanyol vs Kostarika',
+              place : 'Al Thumama Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '24 November 2022\n20.00 WIB',
+              match: 'Uruguay vs Korea Selatan',
+              place : 'Education City Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '25 November 2022\n02.00 WIB',
+              match: 'Brazil vs Serbia',
+              place : 'Lusail Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '26 November 2022\n02.00 WIB',
+              match: 'Prancis vs Denmark',
+              place : 'Ras Abu Aboud Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '27 November 2022\n20.00 WIB',
+              match: 'Belgia vs Maroko',
+              place : 'Al Thumama Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '28 November 2022\n02.00 WIB',
+              match: 'Spanyol vs Jerman',
+              place : 'Al Bayt Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '29 November 2022\n02.00 WIB',
+              match: ' Portugal vs Uruguay',
+              place : 'Lusail Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '30 November 2022\n22.00 WIB',
+              match: 'Australia vs Denmark',
+              place : 'Al Janoub Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '01 Desember 2022\n22.00 WIB',
+              match: 'Kroasia vs Belgia',
+              place : 'Ahmad Bin Ali Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '02 Desember 2022\n02.00 WIB',
+              match: 'Jepang vs Spanyol',
+              place : 'Khalifa International Stadium',
+            ),
+            const SizedBox(height: 5),
+            Schedule(
+              time: '03 Desember 2022\n02.00 WIB',
+              match: 'Kamerun vs Brasil',
+              place : 'Lusail Stadium',
+            ),
+          ],
+        );
   }
 }
